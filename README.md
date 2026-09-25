@@ -28,24 +28,7 @@ segundo fator TOTP, exclusão lógica no financeiro, log de auditoria e checklis
 revisado a cada módulo entregue.
 `Python` `FastAPI` `PostgreSQL`
 
----
 
-### Coisas que aprendi fazendo
-
-**Quando não tem API, automatize a interface.** O AMT Remoto da Intelbras não
-expõe nada, então o sistema pilota a janela dele — lê a tela por pixel e manda
-clique e tecla. As posições são guardadas como *fração da janela*, não como
-pixel, e por isso sobrevivem a mudança de escala e de monitor.
-
-**Legado se isola, não se reescreve.** O mesmo sistema lê PostgreSQL, Firebird e
-SQL Server ao mesmo tempo. O SQL Server entra por PowerShell porque o driver não
-estava disponível e instalar em produção não valia o risco — com cache, porque
-cada chamada custa meio segundo.
-
-**Uma consulta lenta derruba a operação.** A supervisão levava 3,7 s e travava o
-popup do próximo alarme. Foi para 79 ms.
-
----
 
 ### Ferramentas
 
